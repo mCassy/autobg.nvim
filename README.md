@@ -10,7 +10,20 @@ Automatically set Neovim's background and colorscheme based on your system's dar
 
 ## Installation
 
-Use your favorite plugin manager. Example with [packer.nvim](https://github.com/wbthomason/packer.nvim):
+Use your favorite plugin manager.
+
+### With [lazy.nvim](https://github.com/folke/lazy.nvim)
+
+```lua
+{
+  'mCassy/autobg.nvim',
+  config = function()
+    require('autobg').setup()
+  end,
+}
+```
+
+### With [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 ```lua
 use {
