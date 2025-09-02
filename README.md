@@ -58,6 +58,23 @@ require('autobg').setup {
 | dark   | string | Colorscheme for dark mode (optional)  |
 | light  | string | Colorscheme for light mode (optional) |
 
+### Using lazy.nvim events
+
+You can use lazy.nvim's `event` option to control when autobg.nvim loads. For best results, use `VimEnter` or `VeryLazy`:
+
+```lua
+{
+  'mCassy/autobg.nvim',
+  event = 'VimEnter', -- or 'VeryLazy'
+  config = function()
+    require('autobg').setup {
+      dark = 'tokyonight',
+      light = 'github_light'
+    }
+  end,
+}
+```
+
 ## Supported Platforms
 
 - **macOS**: Uses `defaults read -g AppleInterfaceStyle`
