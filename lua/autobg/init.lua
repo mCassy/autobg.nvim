@@ -56,11 +56,6 @@ function M.setup(opts)
     elseif theme == "light" and opts.light then
         vim.cmd.colorscheme(opts.light)
     end
-
-    -- Reload current colorscheme so it adapts to background
-    if vim.g.colors_name then
-        vim.cmd.colorscheme(vim.g.colors_name)
-    end
 end
 
 return M
